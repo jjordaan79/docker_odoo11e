@@ -39,8 +39,7 @@ COPY ./odoo.conf /etc/odoo/
 RUN chown odoo /etc/odoo/odoo.conf
 
 # Mount /var/lib/odoo to allow restoring filestore and custom_modules for users addons
-/opt/odoo11e/custom_modules /opt/odoo11e/enterprise /opt/odoo11e/web /opt/odoo11e/aeroo_proper for users addons
-RUN mkdir -p /opt/custom_modules /opt/enterprise_v11 /opt/web /opt/aeroo_proper \
+RUN mkdir -p /opt/odoo11e/custom_modules /opt/odoo11e/enterprise_v11 /opt/odoo11e/web /opt/odoo11e/aeroo_proper \
         && chown -R odoo /opt
 VOLUME ["/var/lib/odoo", "/opt/custom_modules", "/opt/enterprise_v11", "/opt/web", "/opt/aeroo_proper"]
 
